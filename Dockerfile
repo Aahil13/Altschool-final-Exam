@@ -2,9 +2,9 @@
 FROM nginx:alpine
 
 # Install Node.js and npm
-RUN apt-get update && apt-get install -y curl
+RUN apt update && apt install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt-get install -y nodejs
+RUN apt install -y nodejs
 
 # Install PM2
 RUN npm install -g pm2
