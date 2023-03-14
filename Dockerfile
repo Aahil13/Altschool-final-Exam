@@ -23,7 +23,7 @@ WORKDIR /home/app
 RUN npm install yarn
 
 # Install dependencies
-RUN yarn install
+RUN yarn
 
 # Remove the default nginx configuration file and replace it with our own
 RUN rm /etc/nginx/nginx.conf
