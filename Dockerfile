@@ -1,10 +1,10 @@
 # Use an official NGINX runtime as a parent image
-FROM nginx:alpine
+FROM nginx:latest
 
 # Install Node.js and npm
-RUN apt update && apt install -y curl
+RUN apt-get update && apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt install -y nodejs
+RUN apt-get install -y nodejs
 
 # Install PM2
 RUN npm install -g pm2
@@ -30,7 +30,8 @@ RUN rm /etc/nginx/nginx.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # Remove the default nginx sites available configuration file and replace it with our own
-RUN echo default > /etc/nginx/sites-available/default
+RUN rm /etc/nginx/sites-available/default
+RUN default /etc/nginx/sites-available/default
 
 # Expose port 80
 EXPOSE 80
