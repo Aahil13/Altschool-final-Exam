@@ -20,7 +20,7 @@ COPY . /home/app
 WORKDIR /home/app
 
 # will execute npm install in /home/app because of WORKDIR
-RUN npm install yarn
+RUN npm install -g yarn
 
 # Install dependencies
 RUN yarn
