@@ -1,5 +1,5 @@
 # Use an official NGINX runtime as a parent image
-FROM nginx:latest
+FROM nginx:alpine
 
 # Install Node.js and npm
 RUN apt-get update && apt-get install -y curl
