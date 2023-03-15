@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const Todo = require('./models/todo')
 
-mongoose.connect('mongodb://localhost/firstmongo')
+mongoose.connect("mongodb://127.0.0.1/firstmongo");
 
 app.use('/', express.static(path.resolve(__dirname, 'assets')))
 
