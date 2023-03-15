@@ -5,7 +5,16 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const Todo = require('./models/todo')
 
-mongoose.connect('mongodb://localhost/firstmongo')
+mongoose.connect("mongodb://localhost/firstmongo", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", function () {
+  console.log("DB Connected!");
+});
 
 app.use('/', express.static(path.resolve(__dirname, 'assets')))
 
