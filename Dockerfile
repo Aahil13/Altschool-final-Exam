@@ -11,6 +11,7 @@ RUN npm install -g pm2
 
 # Set environment variables for MongoDB connection
 ENV MONGO_HOST=mongodb \
+    MONGO_PORT=27017 \
     MONGO_DB=firstmongo 
 
 # Copy the application files to the container

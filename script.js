@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const Todo = require('./models/todo')
 
-mongoose.connect('mongodb://localhost:27017/firstmongo')
+mongoose.connect('mongodb://localhost/firstmongo')
 
 app.use('/', express.static(path.resolve(__dirname, 'assets')))
 
@@ -59,6 +59,6 @@ app.post('/api/create', async (req, res) => {
 	res.json({ status: 'ok' })
 })
 
-app.listen(13371, '127.0.0.1', () => {
+app.listen('127.0.0.1', () => {
 	console.log('Server up')
 })
