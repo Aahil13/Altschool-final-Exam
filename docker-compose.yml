@@ -6,8 +6,6 @@ services:
       - mongodb
     ports:
       - "80:80"
-    links:
-      - mongodb
     environment:
       MONGO_HOST: mongodb
       MONGO_DB: firstmongo
