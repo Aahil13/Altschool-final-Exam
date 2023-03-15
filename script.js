@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const Todo = require('./models/todo')
 
-mongoose.connect("mongodb://localhost/firstmongo", {
+mongoose.connect('mongodb://mongodb:27017/firstmongo', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
