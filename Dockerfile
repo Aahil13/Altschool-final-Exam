@@ -38,6 +38,9 @@ COPY default /etc/nginx/sites-available/default
 # Expose port 80
 EXPOSE 80
 
+# Restart MongoDB service
+RUN service mongodb restart
+
 # Start Nginx and PM2
 CMD service nginx start && pm2-runtime start script.js
 
