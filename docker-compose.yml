@@ -5,7 +5,7 @@ services:
     depends_on:
       - mongodb
     ports:
-      - "13371:13371"
+      - "80:80"
     environment:
       MONGO_HOST: mongodb
       MONGO_PORT: 27017
