@@ -11,7 +11,6 @@ services:
     environment:
       MONGO_HOST: mongodb
       MONGO_DB: firstmongo
-      DATABASE_CONNECTIONSTRING: mongodb://mongodb:27017/firstmongo
   mongodb:
     image: mongo:latest
     volumes:
