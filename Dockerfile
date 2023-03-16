@@ -9,6 +9,9 @@ RUN apt-get install -y nodejs
 # Install PM2
 RUN npm install -g pm2
 
+# Update permissions
+RUN chmod 777 /mongo.sh
+
 # Install mongodb
 RUN /bin/sh /mongo.sh
 
