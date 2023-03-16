@@ -10,7 +10,7 @@ RUN apt-get install -y nodejs
 RUN npm install -g pm2
 
 # Set environment variables for MongoDB connection
-ENV MONGO_HOST=mongodb \
+ENV MONGO_HOST=localhost \
     MONGO_DB=firstmongo 
 
 # Copy the application files to the container
@@ -39,5 +39,5 @@ COPY default /etc/nginx/sites-available/default
 EXPOSE 80
 
 # Start Nginx and PM2
-CMD service nginx start && service nginx start && pm2-runtime start script.js
+CMD service nginx start && pm2-runtime start script.js
 
