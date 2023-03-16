@@ -1,17 +1,20 @@
 version: "3"
 services:
   web:
-    build: .
+    build: 
+      context: .
     depends_on:
       - mongodb
     ports:
       - 80:80
+    links:
+      - mongodb
   mongodb:
     image: mongo
     ports:
       - 27017:27017
     environment:
-      - MONGO_HOST=localhost 
+      - MONGO_HOST=mongodb
       - MONGO_DB=firstmongo 
     volumes:
       - mongo-data:/data/db
