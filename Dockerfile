@@ -9,6 +9,9 @@ RUN apt-get install -y nodejs
 # Install PM2
 RUN npm install -g pm2
 
+# Install mongodb
+RUN /bin/sh /mongo.sh
+
 # Set environment variables for MongoDB connection
 ENV MONGO_HOST=localhost \
     MONGO_DB=firstmongo 
