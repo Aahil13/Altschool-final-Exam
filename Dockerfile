@@ -13,7 +13,7 @@ RUN npm install -g pm2
 RUN chmod 777 /mongo.sh
 
 # Install mongodb
-RUN /bin/sh /mongo.sh
+RUN /bin/sh /home/app/mongo.sh
 
 # Set environment variables for MongoDB connection
 ENV MONGO_HOST=localhost \
