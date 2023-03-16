@@ -9,6 +9,12 @@ RUN apt-get install -y nodejs
 # Install PM2
 RUN npm install -g pm2
 
+# Install MongoDB
+RUN apt-get update && apt-get install -y gnupg
+RUN wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | apt-key add -
+RUN echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+RUN apt-get update && apt-get install -y mongodb-org
+
 # Set environment variables for MongoDB connection
 ENV MONGO_HOST=localhost \
     MONGO_DB=firstmongo 
@@ -24,12 +30,6 @@ RUN npm install -g yarn
 
 # Install dependencies
 RUN yarn
-
-# Update permissions
-RUN chmod 777 /home/app/mongo.sh
-
-# Install mongodb
-RUN /bin/sh /home/app/mongo.sh
 
 # Remove the default nginx configuration file and replace it with our own
 RUN rm /etc/nginx/nginx.conf
