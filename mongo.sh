@@ -12,7 +12,4 @@ wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add 
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 
 # Update the package list
-apt-get update
-
-# Install MongoDB
-apt-get install -y mongodb-org
+apt-get update && apt-get upgrade
