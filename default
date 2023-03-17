@@ -38,7 +38,7 @@ server {
         #
         # include snippets/snakeoil.conf;
 
-        root /home/ubuntu/node-mongodb-todo/assets;
+        root /home/app/assets;
 
         # Add index.php to the list if you are using PHP
         index index.html index.htm index.nginx-debian.html;

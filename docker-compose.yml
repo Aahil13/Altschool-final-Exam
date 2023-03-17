@@ -4,15 +4,16 @@ services:
     build: 
       context: .
     depends_on:
-      - mongodb
+      - mongo
+    restart: always
     ports:
-      - 80:80
+      - '80:80'
     links:
-      - mongodb
-  mongodb:
+      - mongo
+  mongo:
     image: mongo
     ports:
-      - 27017:27017
+      - '27017:27017'
     environment:
       - MONGO_HOST=mongodb
       - MONGO_DB=firstmongo 
