@@ -29,11 +29,8 @@ RUN yarn
 RUN rm /etc/nginx/nginx.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Create directory for custom configuration
-RUN mkdir -p /etc/nginx/sites-available
-
 # Copy default configuration file
-COPY default /etc/nginx/sites-available/default
+COPY default.conf /etc/nginx/conf.d/default.conf
 
 # Expose port 80
 EXPOSE 80
