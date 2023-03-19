@@ -1,3 +1,5 @@
+<img align= "center" alt="Cover image" src="/cover image.JPG">
+
 # Altschool Cloud Exam
 
 ## Overview
