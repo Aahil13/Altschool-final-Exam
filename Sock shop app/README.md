@@ -19,6 +19,8 @@ You can create this project using:
 
 The live link to the project can be found [here](http://a0b973cb1f7bb41bf8a47842649301e4-1099069357.us-east-1.elb.amazonaws.com/)
 
+![sock shop app](../images/sockshopappimage.JPG)
+
 ## Credits
 
 -  Weaveworks community created the project. The repository of the application can be found [here](https://github.com/microservices-demo/microservices-demo)
