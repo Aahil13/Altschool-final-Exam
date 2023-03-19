@@ -27,6 +27,3 @@ You can use this [link](https://aahil13.github.io/Altschool-final-Exam/) to acce
 
 - This project was assigned by Altschool school of Engineering. 
 
-- The Todo application was built by [Mehul Mohan
-](https://github.com/mehulmpt). 
-
