@@ -17,7 +17,7 @@ Both folders contains files that correspond to their deployment. The following f
 
 ## Live link
 
-You can use this [link]() to access both applications. Each button on the page leads to the individual project live link.
+You can use this [link](https://aahil13.github.io/Altschool-final-Exam/) to access both applications. Each button on the page leads to the individual project live link.
 
 ![Project Screenshot](appimage.JPG)
 
