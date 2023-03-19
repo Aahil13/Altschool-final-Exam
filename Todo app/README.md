@@ -1,3 +1,5 @@
+<img align= "center" alt="Cover image" src="/images/todoappcoverimage.JPG">
+
 # Todo Application
 
 ## Overview
