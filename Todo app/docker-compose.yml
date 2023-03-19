@@ -1,0 +1,26 @@
+version: "3"
+services:
+  web:
+    build: 
+      context: .
+    depends_on:
+      - mongo
+    restart: always
+    ports:
+      - '80:80'
+    links:
+      - mongo
+    labels:
+      kompose.service.type: LoadBalancer
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
+    environment:
+      - MONGO_HOST=mongodb
+      - MONGO_DB=firstmongo 
+    volumes:
+      - mongo-data:/data/db
+volumes:
+  mongo-data:
+    driver: local
