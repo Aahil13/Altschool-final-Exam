@@ -1,4 +1,4 @@
-<img align= "center" alt="Cover image" src="/cover image.JPG">
+<img align= "center" alt="Cover image" src="/images/cover image.JPG">
 
 # Altschool Cloud Exam
 
@@ -21,7 +21,7 @@ Both folders contains files that correspond to their deployment. The following f
 
 You can use this [link](https://aahil13.github.io/Altschool-final-Exam/) to access both applications. Each button on the page leads to the individual project live link.
 
-![Project Screenshot](appimage.JPG)
+![Project Screenshot](/images/appimage.JPG)
 
 ## Credits
 
